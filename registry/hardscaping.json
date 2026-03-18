@@ -1,0 +1,107 @@
+{
+  "slug": "hardscaping",
+  "brandName": "HardscapeAI",
+  "domain": "hardscapeai.com",
+  "repoDir": "/home/groot/vertical-hardscaping",
+  "tagline": "AI Receptionist for Hardscaping Contractors",
+  "description": "Never miss a hardscaping lead again. HardscapeAI answers calls, qualifies projects, and books consultations 24/7 — built specifically for hardscaping contractors.",
+  "status": "planned",
+
+  "agent": {
+    "publicId": null,
+    "backendUrl": "https://backend-api-production-b536.up.railway.app",
+    "phoneNumber": null,
+    "voiceId": "shimmer",
+    "systemPromptNotes": "Friendly AI receptionist for a hardscaping company. Qualifies leads by asking about: project type (patio/retaining wall/driveway/walkway/outdoor kitchen/fire pit), approximate area size, material preferences (pavers/natural stone/concrete), timeline, budget range, and property type. Books on-site consultations. Knowledgeable but not pushy."
+  },
+
+  "theme": {
+    "primary": "#78716C",
+    "accent": "#A8A29E",
+    "success": "#10B981",
+    "warning": "#F59E0B"
+  },
+
+  "industry": {
+    "name": "Hardscaping Contractors",
+    "shortName": "Hardscapers",
+    "avgTicket": "$5,000 - $50,000",
+    "painPoint": "Missing calls while on the job site means losing $10K-$50K hardscaping projects to competitors who answer first",
+    "projectTypes": [
+      "Patio Installation",
+      "Retaining Walls",
+      "Driveways",
+      "Walkways & Pathways",
+      "Outdoor Kitchens",
+      "Fire Pits & Fireplaces",
+      "Pool Decks",
+      "Steps & Staircases"
+    ],
+    "commonSoftware": [
+      "LMN",
+      "Jobber",
+      "Aspire",
+      "SingleOps",
+      "QuickBooks"
+    ],
+    "leadSources": [
+      "Google Search",
+      "Houzz",
+      "HomeAdvisor",
+      "Angi",
+      "Referrals",
+      "Job Site Signs",
+      "Instagram"
+    ]
+  },
+
+  "seo": {
+    "primaryKeywords": [
+      "AI receptionist for hardscapers",
+      "hardscaping answering service",
+      "AI for hardscaping companies",
+      "hardscape lead management",
+      "hardscaping business automation"
+    ],
+    "metaPixelId": null,
+    "indexNowKey": null
+  },
+
+  "competitors": [
+    {
+      "name": "Ruby Receptionists",
+      "slug": "ruby-receptionists",
+      "type": "answering-service",
+      "pricing": "$349-$1,499/mo",
+      "weaknesses": ["No AI", "Limited hours", "No industry knowledge", "Per-minute billing"]
+    },
+    {
+      "name": "Smith.ai",
+      "slug": "smith-ai",
+      "type": "answering-service",
+      "pricing": "$292.50-$1,170/mo",
+      "weaknesses": ["Generic scripts", "No hardscaping industry knowledge", "Per-call pricing"]
+    },
+    {
+      "name": "Voicemail",
+      "slug": "voicemail",
+      "type": "status-quo",
+      "pricing": "Free",
+      "weaknesses": ["60%+ of callers hang up", "No qualification", "Delayed response", "Lost leads"]
+    }
+  ],
+
+  "relatedVerticals": [
+    { "name": "PainterAI", "domain": "painterai.com", "slug": "painters" },
+    { "name": "WindowProAI", "domain": "windowproai.com", "slug": "windows-doors" }
+  ],
+
+  "vercel": {
+    "projectId": null,
+    "teamId": null
+  },
+  "calcomLink": null,
+  "social": {},
+  "createdAt": "2026-03-18",
+  "lastDeployedAt": null
+}

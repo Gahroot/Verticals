@@ -1,0 +1,21 @@
+{
+  "name": "verticals-hub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scaffold": "tsx scripts/scaffold.ts",
+    "push-content": "tsx scripts/push-content.ts",
+    "sync-crosslinks": "tsx scripts/sync-crosslinks.ts",
+    "status": "tsx scripts/status.ts",
+    "setup-agent": "tsx scripts/setup-agent.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  }
+}

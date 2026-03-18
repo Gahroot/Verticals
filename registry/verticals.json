@@ -1,0 +1,34 @@
+{
+  "verticals": [
+    {
+      "slug": "painters",
+      "brandName": "PainterAI",
+      "domain": "painterai.com",
+      "status": "planned",
+      "repoDir": "/home/groot/vertical-painters"
+    },
+    {
+      "slug": "hardscaping",
+      "brandName": "HardscapeAI",
+      "domain": "hardscapeai.com",
+      "status": "planned",
+      "repoDir": "/home/groot/vertical-hardscaping"
+    },
+    {
+      "slug": "windows-doors",
+      "brandName": "WindowProAI",
+      "domain": "windowproai.com",
+      "status": "planned",
+      "repoDir": "/home/groot/vertical-windows-doors"
+    }
+  ],
+  "backend": {
+    "url": "https://backend-api-production-b536.up.railway.app",
+    "widgetUrl": "https://backend-api-production-b536.up.railway.app/widget/v1/widget.js",
+    "repoDir": "/home/groot/aicrm"
+  },
+  "prestyj": {
+    "url": "https://prestyj.com",
+    "repoDir": "/home/groot/prestyj"
+  }
+}

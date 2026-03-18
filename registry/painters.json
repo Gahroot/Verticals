@@ -1,0 +1,106 @@
+{
+  "slug": "painters",
+  "brandName": "PainterAI",
+  "domain": "painterai.com",
+  "repoDir": "/home/groot/vertical-painters",
+  "tagline": "AI Receptionist for Painting Contractors",
+  "description": "Never miss a painting lead again. PainterAI answers calls, qualifies jobs, and books estimates 24/7 — built specifically for painting contractors.",
+  "status": "planned",
+
+  "agent": {
+    "publicId": null,
+    "backendUrl": "https://backend-api-production-b536.up.railway.app",
+    "phoneNumber": null,
+    "voiceId": "alloy",
+    "systemPromptNotes": "Friendly AI receptionist for a painting company. Qualifies leads by asking about: project type (interior/exterior/cabinet/deck), approximate square footage, timeline, property type (residential/commercial), and preferred contact method. Books estimates on the calendar. Warm, professional tone — not salesy."
+  },
+
+  "theme": {
+    "primary": "#2563EB",
+    "accent": "#3B82F6",
+    "success": "#10B981",
+    "warning": "#F59E0B"
+  },
+
+  "industry": {
+    "name": "Painting Contractors",
+    "shortName": "Painters",
+    "avgTicket": "$3,000 - $15,000",
+    "painPoint": "Missing calls while on the job site means losing $5K-$15K painting jobs to competitors who answer first",
+    "projectTypes": [
+      "Interior Painting",
+      "Exterior Painting",
+      "Cabinet Refinishing",
+      "Deck Staining",
+      "Commercial Painting",
+      "Pressure Washing",
+      "Drywall Repair"
+    ],
+    "commonSoftware": [
+      "PaintScout",
+      "Jobber",
+      "Housecall Pro",
+      "CompanyCam",
+      "QuickBooks"
+    ],
+    "leadSources": [
+      "Google Search",
+      "Nextdoor",
+      "HomeAdvisor",
+      "Angi",
+      "Referrals",
+      "Yard Signs",
+      "Facebook"
+    ]
+  },
+
+  "seo": {
+    "primaryKeywords": [
+      "AI receptionist for painters",
+      "painting contractor answering service",
+      "AI for painting companies",
+      "painter lead management",
+      "painting business automation"
+    ],
+    "metaPixelId": null,
+    "indexNowKey": null
+  },
+
+  "competitors": [
+    {
+      "name": "Ruby Receptionists",
+      "slug": "ruby-receptionists",
+      "type": "answering-service",
+      "pricing": "$349-$1,499/mo",
+      "weaknesses": ["No AI", "Limited hours", "No industry knowledge", "Per-minute billing"]
+    },
+    {
+      "name": "Smith.ai",
+      "slug": "smith-ai",
+      "type": "answering-service",
+      "pricing": "$292.50-$1,170/mo",
+      "weaknesses": ["Generic scripts", "No painting industry knowledge", "Per-call pricing"]
+    },
+    {
+      "name": "Voicemail",
+      "slug": "voicemail",
+      "type": "status-quo",
+      "pricing": "Free",
+      "weaknesses": ["60%+ of callers hang up", "No qualification", "Delayed response", "Lost leads"]
+    }
+  ],
+
+  "relatedVerticals": [
+    { "name": "HardscapeAI", "domain": "hardscapeai.com", "slug": "hardscaping" },
+    { "name": "WindowProAI", "domain": "windowproai.com", "slug": "windows-doors" }
+  ],
+
+  "vercel": {
+    "projectId": null,
+    "teamId": null
+  },
+  "calcomLink": null,
+  "social": {},
+  "createdAt": "2026-03-18",
+  "lastDeployedAt": null
+}

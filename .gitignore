@@ -1,0 +1,26 @@
+node_modules/
+dist/
+.env
+.env.local
+
+# Template build artifacts (don't commit these)
+template/node_modules/
+template/.next/
+template/.source/
+template/.vercel/
+template/tsconfig.tsbuildinfo
+template/.env.local
+
+# Video samples are large — tracked via LFS or excluded
+template/video-ad-samples/
+
+# Stray screenshots in template root
+template/image*.png
+template/image*.jpg
+template/og image.jpg
+template/luxury-presence-pricing.png
+template/floating-p.svg
+
+# OS files
+.DS_Store
+Thumbs.db
