@@ -1,14 +1,17 @@
 import { ImageResponse } from "next/og";
+import { config } from "@/lib/vertical.config";
 
 export const runtime = "edge";
 
 export async function GET() {
+  const logo = config.brandName[0].toUpperCase();
+
   return new ImageResponse(
     (
       <div
         style={{
           fontSize: 120,
-          background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)",
+          background: `linear-gradient(135deg, ${config.theme.primary} 0%, ${config.theme.accent} 100%)`,
           width: "100%",
           height: "100%",
           display: "flex",
@@ -23,7 +26,7 @@ export async function GET() {
             fontWeight: 800,
           }}
         >
-          P
+          {logo}
         </span>
       </div>
     ),

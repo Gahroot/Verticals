@@ -1,18 +1,20 @@
 {
   "slug": "windows-doors",
-  "brandName": "WindowProAI",
-  "domain": "windowproai.com",
+  "brandName": "windoAI",
+  "domain": "windoai.com",
   "repoDir": "/home/groot/vertical-windows-doors",
-  "tagline": "AI Receptionist for Window & Door Replacement Companies",
-  "description": "Never miss a window or door replacement lead again. WindowProAI answers calls, qualifies projects, and books in-home estimates 24/7 — built for window and door contractors.",
-  "status": "planned",
+  "tagline": "AI Receptionist for Window & Door Companies",
+  "description": "Never miss a window or door lead again. windoAI answers calls, qualifies projects, and books in-home estimates 24/7 — built for window and door manufacturers and installers.",
+  "status": "active",
 
   "agent": {
-    "publicId": null,
+    "publicId": "ag_bWJ4ezN8",
+    "agentId": "d371abb8-59aa-4057-8c3f-ffb1aa2599dc",
     "backendUrl": "https://backend-api-production-b536.up.railway.app",
     "phoneNumber": null,
-    "voiceId": "nova",
-    "systemPromptNotes": "Friendly AI receptionist for a window and door replacement company. Qualifies leads by asking about: project type (window replacement/door replacement/new construction), number of windows/doors, current window type and issues (drafty/foggy/broken seal), home age, timeline, and whether they want energy-efficient options. Books in-home estimates. Knowledgeable about energy savings and ROI."
+    "voiceId": "eve",
+    "voiceProvider": "grok",
+    "systemPromptNotes": "Friendly, warm AI receptionist for a window and door company. Uses NEPQ (Neuro-Emotional Persuasion Questioning) sales technique — never pitches, only asks questions that help the homeowner discover their own need.\n\n## NEPQ Discovery Flow\n\n### Situation Questions (understand their world):\n- \"How long have you been thinking about replacing your windows?\"\n- \"What made you start looking into this now?\"\n- \"How old is your home?\"\n- \"How many windows or doors are we talking about?\"\n\n### Problem Awareness Questions (surface the pain):\n- \"Are you noticing any drafts or condensation between the panes?\"\n- \"How are your energy bills compared to a few years ago?\"\n- \"Do any of your windows stick or not lock properly?\"\n- \"Have you noticed any outside noise getting through?\"\n\n### Consequence Questions (make the cost of inaction real):\n- \"What do you think those drafty windows are adding to your heating bill every month?\"\n- \"How long have you been putting up with that?\"\n- \"If you wait another winter, what does that look like for your comfort and your bills?\"\n\n### Solution Awareness Questions (paint the after picture):\n- \"What would it mean if your home was comfortable year-round and your energy bills dropped 25-30%?\"\n- \"If we could get someone out this week for a free estimate, would that work for your schedule?\"\n\n## Personality\n- Genuinely curious, never pushy\n- Validates every answer (\"That makes sense\", \"A lot of homeowners tell me the same thing\")\n- Transitions naturally between question types\n- Always moves toward booking an in-home estimate\n- Knowledgeable about energy savings, ROI, product lines, and both manufacturing and installation services"
   },
 
   "theme": {
@@ -23,10 +25,10 @@
   },
 
   "industry": {
-    "name": "Window & Door Replacement Contractors",
-    "shortName": "Window Pros",
+    "name": "Window & Door Manufacturers and Installers",
+    "shortName": "Window Companies",
     "avgTicket": "$10,000 - $30,000",
-    "painPoint": "Speed-to-lead is critical — homeowners request 3-5 quotes and book with whoever responds first. Missing a call means losing a $15K-$30K job.",
+    "painPoint": "Speed-to-lead is critical — homeowners request 3-5 quotes and book with whoever responds first. Missing a call means losing a $15K-$30K job. Many companies both manufacture and install, so calls range from product inquiries to installation scheduling.",
     "projectTypes": [
       "Window Replacement",
       "Door Replacement",
@@ -97,11 +99,11 @@
   ],
 
   "vercel": {
-    "projectId": null,
-    "teamId": null
+    "projectId": "prj_tUyIz2foP7U5lpVJWFzjJm2qBw1Z",
+    "teamId": "team_ni7x4mDp1ybcSSnw1xIU8ITw"
   },
   "calcomLink": null,
   "social": {},
   "createdAt": "2026-03-18",
-  "lastDeployedAt": null
+  "lastDeployedAt": "2026-03-18T00:00:00Z"
 }

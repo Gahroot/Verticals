@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { config } from "@/lib/vertical.config";
 
 export const runtime = "edge";
-export const alt = `${config.brandName} - AI Sales Agents for Service Businesses`;
+export const alt = `${config.brandName} - ${config.tagline}`;
 export const size = {
   width: 1200,
   height: 630,
@@ -10,6 +10,8 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
+  const logo = config.brandName[0].toUpperCase();
+
   return new ImageResponse(
     (
       <div
@@ -21,8 +23,7 @@ export default async function Image() {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "#0a0a0a",
-          backgroundImage:
-            "radial-gradient(circle at 25% 25%, #1a1a2e 0%, transparent 50%), radial-gradient(circle at 75% 75%, #16213e 0%, transparent 50%)",
+          backgroundImage: `radial-gradient(circle at 25% 25%, ${config.theme.primary}22 0%, transparent 50%), radial-gradient(circle at 75% 75%, ${config.theme.accent}22 0%, transparent 50%)`,
         }}
       >
         <div
@@ -34,7 +35,6 @@ export default async function Image() {
             gap: "24px",
           }}
         >
-          {/* Floating P logo representation */}
           <div
             style={{
               display: "flex",
@@ -42,9 +42,9 @@ export default async function Image() {
               justifyContent: "center",
               width: "140px",
               height: "140px",
-              background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)",
+              background: `linear-gradient(135deg, ${config.theme.primary} 0%, ${config.theme.accent} 100%)`,
               borderRadius: "28px",
-              boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)",
+              boxShadow: `0 20px 40px ${config.theme.primary}4d`,
             }}
           >
             <span
@@ -55,7 +55,7 @@ export default async function Image() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.3)",
               }}
             >
-              P
+              {logo}
             </span>
           </div>
           <div
@@ -86,7 +86,7 @@ export default async function Image() {
                 maxWidth: "800px",
               }}
             >
-              AI Sales Agents
+              {config.tagline}
             </p>
           </div>
           <div
@@ -102,7 +102,7 @@ export default async function Image() {
                 display: "flex",
                 alignItems: "center",
                 gap: "8px",
-                color: "#22c55e",
+                color: config.theme.success,
                 fontSize: "24px",
               }}
             >
@@ -114,7 +114,7 @@ export default async function Image() {
                 display: "flex",
                 alignItems: "center",
                 gap: "8px",
-                color: "#22c55e",
+                color: config.theme.success,
                 fontSize: "24px",
               }}
             >
@@ -126,7 +126,7 @@ export default async function Image() {
                 display: "flex",
                 alignItems: "center",
                 gap: "8px",
-                color: "#22c55e",
+                color: config.theme.success,
                 fontSize: "24px",
               }}
             >

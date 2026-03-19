@@ -325,7 +325,103 @@ export const config: VerticalConfig = ${JSON.stringify(
   );
 }
 
-console.log(`\n✅ Vertical "${config.brandName}" scaffolded at ${config.repoDir}`);
+// 16. Create GitHub repo and push
+console.log("16. Creating GitHub repo...");
+const repoName = config.brandName.toLowerCase().replace(/[^a-z0-9-]/g, "");
+try {
+  execSync("git add -A", { cwd: config.repoDir, stdio: "pipe" });
+  execSync('git commit -m "Initial commit: scaffold from verticals hub"', {
+    cwd: config.repoDir,
+    stdio: "pipe",
+  });
+  execSync(
+    `gh repo create Gahroot/${repoName} --public --source . --push`,
+    { cwd: config.repoDir, stdio: "inherit" }
+  );
+  console.log(`   GitHub repo created: https://github.com/Gahroot/${repoName}`);
+} catch {
+  console.error(
+    "\n   WARNING: GitHub repo creation failed. Create it manually."
+  );
+}
+
+// 17. Link to Vercel and deploy
+console.log("17. Linking to Vercel and deploying...");
+try {
+  // Link to Vercel (creates new project)
+  execSync("vercel link --yes", { cwd: config.repoDir, stdio: "inherit" });
+
+  // Read the generated .vercel/project.json to get project ID
+  const vercelProjectPath = join(config.repoDir, ".vercel", "project.json");
+  if (existsSync(vercelProjectPath)) {
+    const vercelProject = JSON.parse(readFileSync(vercelProjectPath, "utf-8"));
+    // Update registry with Vercel IDs
+    const registryPath = join(HUB_ROOT, "registry", `${slug}.json`);
+    const registryConfig = JSON.parse(readFileSync(registryPath, "utf-8"));
+    registryConfig.vercel.projectId = vercelProject.projectId;
+    registryConfig.vercel.teamId = vercelProject.orgId;
+    writeFileSync(registryPath, JSON.stringify(registryConfig, null, 2) + "\n");
+    console.log(`   Vercel project linked: ${vercelProject.projectId}`);
+  }
+
+  // Add custom domain
+  console.log(`18. Adding custom domain: ${config.domain}...`);
+  try {
+    execSync(`vercel domains add ${config.domain}`, {
+      cwd: config.repoDir,
+      stdio: "inherit",
+    });
+    // Also add www subdomain
+    execSync(`vercel domains add www.${config.domain}`, {
+      cwd: config.repoDir,
+      stdio: "inherit",
+    });
+    console.log(`   Domains configured: ${config.domain}, www.${config.domain}`);
+  } catch {
+    console.error(
+      `\n   WARNING: Domain setup failed. Add ${config.domain} manually via vercel domains.`
+    );
+  }
+
+  // Production deploy
+  console.log("19. Running production deploy...");
+  execSync("vercel deploy --prod", {
+    cwd: config.repoDir,
+    stdio: "inherit",
+  });
+
+  // Update lastDeployedAt
+  const registryPath = join(HUB_ROOT, "registry", `${slug}.json`);
+  const registryConfig = JSON.parse(readFileSync(registryPath, "utf-8"));
+  registryConfig.lastDeployedAt = new Date().toISOString().split("T")[0];
+  writeFileSync(registryPath, JSON.stringify(registryConfig, null, 2) + "\n");
+
+  console.log("   Production deploy complete!");
+} catch {
+  console.error(
+    "\n   WARNING: Vercel deploy failed. Run `/deploy " +
+      slug +
+      "` manually."
+  );
+}
+
+// Connect GitHub repo to Vercel project
+console.log("20. Connecting GitHub repo to Vercel...");
+try {
+  execSync(
+    `vercel git connect Gahroot/${repoName}`,
+    { cwd: config.repoDir, stdio: "inherit" }
+  );
+  console.log("   GitHub repo connected to Vercel for auto-deploys.");
+} catch {
+  console.error(
+    "\n   WARNING: GitHub-Vercel connection failed. Connect manually in Vercel dashboard."
+  );
+}
+
+console.log(`\n✅ Vertical "${config.brandName}" fully deployed!`);
+console.log(`   Repo: https://github.com/Gahroot/${repoName}`);
+console.log(`   Site: https://${config.domain}`);
 console.log("\nNext steps:");
-console.log("  1. Add content (best-for, alternatives, blog)");
-console.log(`  2. Deploy: cd ${config.repoDir} && vercel`);
+console.log("  1. Configure DNS for " + config.domain + " (point to Vercel)");
+console.log("  2. Add content (best-for, alternatives, blog)");

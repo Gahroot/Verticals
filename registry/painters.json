@@ -92,7 +92,7 @@
 
   "relatedVerticals": [
     { "name": "HardscapeAI", "domain": "hardscapeai.com", "slug": "hardscaping" },
-    { "name": "WindowProAI", "domain": "windowproai.com", "slug": "windows-doors" }
+    { "name": "windoAI", "domain": "windoai.com", "slug": "windows-doors" }
   ],
 
   "vercel": {

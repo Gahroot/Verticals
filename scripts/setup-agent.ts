@@ -40,7 +40,7 @@ console.log(`   Config: ${configPath}`);
 // 3. Run the Python script via Railway CLI
 console.log("\n2. Creating agent in production database via Railway...");
 const aicrm = "/home/groot/aicrm";
-const cmd = `cd ${aicrm} && railway run -- bash -c "cd backend && python scripts/create_vertical_agent.py ${configPath}"`;
+const cmd = `cd ${aicrm} && railway run -- bash -c "cd backend && python3 scripts/create_vertical_agent.py ${configPath}"`;
 
 let output: string;
 try {

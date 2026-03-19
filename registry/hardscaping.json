@@ -93,7 +93,7 @@
 
   "relatedVerticals": [
     { "name": "PainterAI", "domain": "painterai.com", "slug": "painters" },
-    { "name": "WindowProAI", "domain": "windowproai.com", "slug": "windows-doors" }
+    { "name": "windoAI", "domain": "windoai.com", "slug": "windows-doors" }
   ],
 
   "vercel": {

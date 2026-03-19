@@ -24,3 +24,4 @@ template/floating-p.svg
 # OS files
 .DS_Store
 Thumbs.db
+.vercel

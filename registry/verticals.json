@@ -16,9 +16,9 @@
     },
     {
       "slug": "windows-doors",
-      "brandName": "WindowProAI",
-      "domain": "windowproai.com",
-      "status": "planned",
+      "brandName": "windoAI",
+      "domain": "windoai.com",
+      "status": "active",
       "repoDir": "/home/groot/vertical-windows-doors"
     }
   ],

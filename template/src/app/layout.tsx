@@ -20,7 +20,7 @@ const siteConfig = {
   title: `${config.tagline} | ${config.brandName}`,
   description: config.description,
   url: `https://${config.domain}`,
-  ogImage: "/og-image.jpg",
+  ogImage: "/opengraph-image",
   creator: config.social.twitter || `@${config.slug}`,
 };
 
